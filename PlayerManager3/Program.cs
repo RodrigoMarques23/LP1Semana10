@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PlayerManager2
+namespace PlayerManager3
 {
     /// <summary>
     /// The player listing program.
@@ -133,9 +133,14 @@ namespace PlayerManager2
         {
             Console.WriteLine("\nList of players");
             Console.WriteLine("-------------\n");
+            
+            //Creating a new list
+            List<Player> orderList = new List<Player>(playersToList);
+            
+            orderList.Sort();
 
             // Show each player in the enumerable object
-            foreach (Player p in playersToList)
+            foreach (Player p in orderList)
             {
                 Console.WriteLine($" -> {p.Name} with a score of {p.Score}");
             }
@@ -159,6 +164,11 @@ namespace PlayerManager2
             // Get players with score higher than the user-specified value
             playersWithScoreGreaterThan =
                 GetPlayersWithScoreGreaterThan(minScore);
+            
+            //Creating a new list
+            List<Player> orderList = new List<Player>(playersWithScoreGreaterThan);
+            
+            orderList.Sort();
 
             // List all players with score higher than the user-specified value
             ListPlayers(playersWithScoreGreaterThan);
