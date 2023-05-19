@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringCollections", "String
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamePlayer", "SamePlayer\SamePlayer.csproj", "{25008C5F-1C46-4CB0-9252-1AF2631CDA0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LootSort", "LootSort\LootSort.csproj", "{79183FF4-A60F-46C5-8252-784DF0F168F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{25008C5F-1C46-4CB0-9252-1AF2631CDA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25008C5F-1C46-4CB0-9252-1AF2631CDA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25008C5F-1C46-4CB0-9252-1AF2631CDA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79183FF4-A60F-46C5-8252-784DF0F168F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79183FF4-A60F-46C5-8252-784DF0F168F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79183FF4-A60F-46C5-8252-784DF0F168F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79183FF4-A60F-46C5-8252-784DF0F168F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
