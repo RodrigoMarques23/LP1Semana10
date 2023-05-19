@@ -54,5 +54,13 @@ namespace LootSort
 
             return 0;
         }
+        public override int GetHashCode()
+        {
+            return Kind.GetHashCode() ^ Value.GetHashCode();
+        }
+        public override bool Equals(object obj)
+        {
+            return true; 
+        }
     }
 }
