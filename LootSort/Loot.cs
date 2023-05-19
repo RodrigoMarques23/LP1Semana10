@@ -46,21 +46,30 @@ namespace LootSort
             if (Kind != other.Kind)
                 return Kind.ToString().CompareTo(other.Kind.ToString());
 
-            if (Value != other.Value)
-                return Value > other.Value ? 1 : -1;
-
-            if (Description != other.Description)
+            else if (Value != other.Value)
+                return -Value.CompareTo(other.Value);
+            else if (Description != other.Description)
                 return Description.CompareTo(other.Description);
 
             return 0;
         }
         public override int GetHashCode()
         {
-            return Kind.GetHashCode() ^ Value.GetHashCode();
+            return Kind.GetHashCode() ^ Value.GetHashCode() ^ Description.GetHashCode();
         }
         public override bool Equals(object obj)
         {
-            return true; 
+            Loot otherLoot = obj as Loot;
+            if (otherLoot == null)
+            {
+                return false;
+            }
+            else
+            {
+                return (otherLoot.Kind == this.Kind) &&
+                (otherLoot.Value == this.Value) &&
+                (otherLoot.Description == this.Description);
+            }
         }
     }
 }
